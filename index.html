@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1400">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+
+            $('.tab .tabs a').on('click',function(){ // 탭메뉴에 있는 링크를 클릭했을때
+                var idx = $(this).parent().index(); // 현재 클릭한 링크의 부모가 몇번째 인지 idx 변수에 넣는다.
+
+                $(this).parent().siblings().removeClass('on'); // 현재 클릭한 링크의 부모를 제외 한 나머지 li에 on클래스를 제거하고
+                $(this).parent().addClass('on'); // 현재 클릭한 링크의 부모 li에 on클래스 넣는다.
+
+                $(this).parent().parent().siblings('.tab_con').removeClass('on');
+                // 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con에 클래스 on을 지워준다.
+
+                $(this).parent().parent().siblings('.tab_con').eq(idx).addClass('on');
+                // 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con을 선택하고 그중 eq번째에 클래스 on을 넣는다.
+
+            });
+
+            });
+    </script>
+    <title>Event</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--파비콘-->
+    <link href="images/sub_logo.png" rel="icon" type="image/png" sizes="32x32">
+</head>
+<body>
+    <!--header s-->
+    <div id="header">
+        <div class="header_inner">
+            <div class="nav">
+                <a href="https://yunjung76.github.io/pururum/" class="logo"><img src="images/logo.png" alt="로고이미지"></a>
+                <ul id="gnb">
+                    <li><a href="https://yunjung76.github.io/sub01/" class="link">푸르름<div class="solid01"></div></a></li>
+                    <li><a href="https://yunjung76.github.io/sub02/
+                        " class="link">Menu<div class="solid01"></div></a></li>
+                    <li><a href="https://yunjung76.github.io/sub03/" class="link">Shop<div class="solid01"></div></a></li>
+                    <li><a href="https://yunjung76.github.io/sub04/" >Event<div class="solid01"></div></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--header f-->
+
+    <!--banner s-->
+    <div id="banner">
+        <img src="images/banner.jpg" alt="배너이미지" class="banner_img">
+    </div>
+    <!--banner f-->
+
+    <div class="tab"><!--tab s-->
+        <ul class="tabs type1">
+       
+            <li class="on"><a href="#a" class="border">진행중 이벤트<div class="solid"></div></a></li>
+            
+            
+       
+            <li><a href="#a">종료된 이벤트<div class="solid"></div></a></li>
+        </ul>	
+        
+        <div class="tab_con on"><!--tab_con on s-->
+            <div id="content"><!--content s-->
+                <div class="event left">
+                    <div class="event_box">
+                        <a href="#none"><img src="images/event01.png" alt="개기월식 이벤트" class="event01"></a>
+                    </div>
+                    
+
+                    <div class="event_text long">
+                        <a href="#none"><h3>개기월식 맞이 할인 이벤트 개최</h3></a>
+                        <h5>2022. 11. 08</h5>
+                    </div>
+                </div>
+
+
+                <div class="event">
+                    <div class="event_box">
+                        <a href="#none"><img src="images/event02.png" alt="픽업 서비스 개시" class="event02"></a>
+                    </div>
+                    
+
+                    <div class="event_text short">
+                        <a href="#none"><h3>픽업 서비스 개시 안내</h3></a>
+                    </div>
+                </div>
+
+                <div class="event left">
+                    <div class="event_box">
+                        <a href="#none"><img src="images/event03.png" alt="가을 신메뉴 출시" class="event03"></a>
+                    </div>
+                    
+                    <div class="event_text short">
+                        <a href="#none"><h3>가을 신메뉴 출시</h3></a>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event_box">
+                        <a href="#none"><img src="images/event04.png" alt="할로윈 이벤트 개최" class="event04"></a>
+                    </div>
+                   
+
+                    <div class="event_text long">
+                        <a href="#none"><h3>할로윈 이벤트 개최</h3></a>
+                        <h5>2022. 10. 29 - 2022. 10. 31</h5>
+                    </div>
+                </div>
+
+            </div><!--content f-->
+
+            
+        </div> <!--tab_con on f-->
+
+
+
+        <!-- 종료된 이벤트 탭 -->
+        
+        
+        <div class="tab_con">
+            <!--tab con s-->
+            
+            <div id="content2"><!--content2 s-->
+                <div class="event left">
+                    <div class="event_box">
+                        <a href="#none"><img src="images/p_event02.png" alt="여름 신메뉴 출시" class="event01"></a>
+                    </div>
+                    
+
+                    <div class="event_text short">
+                        <a href="#none"><h3>여름 신메뉴 출시</h3></a>
+                    </div>
+                </div>
+
+
+                <div class="event">
+                    <a href="#none">
+                        <div class="event_box">
+                            <img src="images/p_event01.png" alt="인스타그램 오픈 이벤트" class="event02">
+                        </div>
+                    </a>
+
+                    <div class="event_text long">
+                        <a href="#none"><h3>인스타그램 오픈 이벤트</h3></a>
+                        <h5>2022. 08. 01 - 2022. 09. 30</h5>
+                    </div>
+                </div>
+            </div><!--end_content f-->
+
+           
+         </div>
+        
+        <!--tab_con f-->
+    </div><!--tab f-->
+
+
+
+
+    
+            <!--footer s-->
+            <div id="footer">
+                <div class="footer_inner">
+                    <a href="https://yunjung76.github.io/pururum/" class="footer_logo"><img src="images/logo.png" alt="푸터로고"></a>
+                    <p class="footer_text">
+                    부산광역시 기장군 정관읍 병산리 205 푸르름 ｜ Tel : 051-123-4567 <br>
+                    Copy Right ⓒ Cafe 푸르름 All right reserved.
+                    </p>
+    
+                    <a href="#none" class="insta"><img src="images/button01.png" alt="인스타그램"></a>
+                    <a href="#none" class="youtube"><img src="images/button02.png" alt="유튜브"></a>
+                    <a href="#none" class="facebook"><img src="images/button03.png" alt="페이스북"></a>
+                </div>
+            </div>
+            <!--footer f-->
+    
+</body>
+</html>
